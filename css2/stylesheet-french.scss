@@ -1,0 +1,352 @@
+//colors
+$color_sunglow_approx: #ffca28;
+$color_white_pointer_approx: #fff5fe;
+$color_silver_approx: #ccc;
+$color_meteor_approx: #c67412;
+$color_strikemaster_approx: #a56799;
+$color_fuchsia_blue_approx: #6e4ccc;
+$black: black;
+
+//fonts
+$font_0: Courgette;
+$font_1: lighter;
+$font_2: Croissant One;
+$font_3: cursive;
+
+//urls
+$url_0: url(https://fonts.googleapis.com/css?family=Courgette|Croissant+One&display=swap);
+
+@charset "UTF-8";
+@import $url_0;
+.menu {
+	display: grid;
+	margin: auto;
+	width: 70%;
+	margin-bottom: 3rem;
+	grid-template-columns: 1fr 3.5fr 4fr 3fr 1fr 1fr;
+	grid-template-rows: auto;
+	row-gap: 5px;
+	grid-template-areas: ". . . . . ." ". h3 h3 h3 h3 ." ". . . . . ." "pr-title pr-title pr-title pr-title pr-title pr-title " ". prelude prelude prelude prelude ." ". . . . . ." "main-title main-title main-title main-title main-title main-title" ". main main main main ." ". . . . . ." "des-title des-title des-title des-title des-title des-title" ". des des des des ." ". . . . . ." ". end-title end-title end-title end-title ." ". . . . . .";
+}
+.prelude {
+	font-family: $font_0, $font_1;
+	color: $color_meteor_approx;
+	grid-area: prelude;
+}
+.brush-title {
+	font-family: $font_0, $font_1;
+	grid-area: pr-title;
+	img {
+		width: 22vw;
+	}
+}
+.pr-title {
+	font-family: $font_0, $font_1;
+	font-weight: bold;
+	color: $color_meteor_approx;
+	text-align: center;
+	display: flex;
+	flex-grow: 1;
+	grid-area: pr-title;
+	align-content: center;
+}
+.main-title {
+	font-family: $font_0, $font_1;
+	color: $color_strikemaster_approx;
+	font-weight: bold;
+	display: flex;
+	flex-grow: 1;
+	grid-area: pr-title;
+	align-content: center;
+}
+.orgue {
+	font-family: $font_0, $font_1;
+	color: $color_strikemaster_approx;
+	grid-area: main;
+}
+.final {
+	font-family: $font_0, $font_1;
+	color: $color_fuchsia_blue_approx;
+	grid-area: des;
+}
+.des-title {
+	font-family: $font_0, $font_1;
+	text-align: center;
+	color: $color_fuchsia_blue_approx;
+	font-weight: bold;
+	display: flex;
+	flex-grow: 1;
+	grid-area: pr-title;
+	align-content: center;
+}
+h3 {
+	font-weight: normal;
+	font-size: 3.5rem;
+}
+section {
+	background-color: $color_white_pointer_approx;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 2px 2px 3px 4px $color_silver_approx;
+	h4 {
+		text-align: center;
+	}
+}
+.entrees {
+	color: $color_meteor_approx;
+}
+.title {
+	font-family: $font_2, $font_3;
+	grid-area: h3;
+	text-align: center;
+}
+.prix {
+	font-weight: bold;
+}
+img {
+	height: 1vw;
+	margin: auto;
+}
+.imgFlip {
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: rotate(180deg);
+}
+.brush-title--2 {
+	grid-area: main-title;
+	img {
+		width: 25vw;
+	}
+}
+.brush-title--3 {
+	grid-area: des-title;
+	img {
+		width: 24vw;
+	}
+}
+.legal {
+	margin-left: 1rem;
+}
+.contact {
+	margin-right: 1rem;
+}
+.price {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row nowrap;
+	flex: 1 1 0;
+	line-height: 1.2rem;
+}
+@media(max-width: 935px) {
+	.menu {
+		width: 80% !important;
+	}
+}
+@media(max-width: 600px) {
+	.price {
+		flex-flow: column wrap !important;
+		p {
+			text-align: center !important;
+			margin-top: 0;
+			padding: 0 1rem;
+			line-height: 1.2rem;
+		}
+	}
+	h3 {
+		font-size: 1rem;
+	}
+}
+@media(max-width: 750px) {
+	.prelude {
+	}
+	.title {
+	}
+	.orgue {
+	}
+	.final {
+	}
+	.brush-title {
+	}
+	.pr-title {
+	}
+	.brush-title--2 {
+	}
+	.main-title {
+	}
+	.brush-title--3 {
+	}
+	.des-title {
+	}
+}
+@media(max-width: 485px) {
+	.menu {
+		margin-top: 25px;
+	}
+	.prelude {
+	}
+	.title {
+	}
+	.orgue {
+	}
+	.final {
+	}
+	.brush-title {
+	}
+	.pr-title {
+	}
+	.brush-title--2 {
+	}
+	.main-title {
+	}
+	.brush-title--3 {
+	}
+	.des-title {
+	}
+}
+.point {
+	content: ".";
+	animation: dots 1.2s steps(5, end) infinite;
+}
+@-webkit-keyframes points {
+	0% {
+		color: transparent;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0.25em 0 0 transparent, 0.5em 0 0 transparent;
+	}
+	20% {
+		color: transparent;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0.25em 0 0 transparent, 0.5em 0 0 transparent;
+	}
+	40% {
+		color: $color_sunglow_approx;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0.25em 0 0 transparent, 0.5em 0 0 transparent;
+	}
+	60% {
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0.25em 0 0 $color_sunglow_approx, 0.5em 0 0 transparent;
+	}
+	80% {
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0.25em 0 0 $color_sunglow_approx, 0.5em 0 0 $color_sunglow_approx;
+	}
+	100% {
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0.25em 0 0 $color_sunglow_approx, 0.5em 0 0 $color_sunglow_approx;
+	}
+}
+.zoom {
+	display: inline-block;
+	overflow: hidden;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: transform 0.4s ease-in-out 0s;
+}
+@media(min-width: 1000px) {
+	.zoom:hover {
+		//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+		transition-duration: 0.5s;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(1.4) !important;
+		opacity: 0.5 !important;
+	}
+}
+.french--underline {
+	&:after {
+		background: $black;
+		background: none repeat scroll 0 0 transparent;
+		content: "";
+		display: block;
+		height: 2.5px;
+		left: 50%;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: width 0.6s ease 0s, left 0.6s ease 0s;
+		width: 0;
+		background: $color_meteor_approx;
+	}
+	&:hover:after {
+		width: 100%;
+		left: 0;
+	}
+}
+.french--underlineTwo {
+	&:after {
+		background: none repeat scroll 0 0 transparent;
+		content: "";
+		display: block;
+		height: 2.5px;
+		left: 50%;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: width 0.6s ease 0s, left 0.6s ease 0s;
+		width: 0;
+		background: $color_strikemaster_approx;
+	}
+	&:hover:after {
+		width: 100%;
+		left: 0;
+	}
+}
+.french--underlineThree {
+	&:after {
+		background: none repeat scroll 0 0 transparent;
+		content: "";
+		display: block;
+		height: 2.5px;
+		left: 50%;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: width 0.6s ease 0s, left 0.6s ease 0s;
+		width: 0;
+		background: $color_fuchsia_blue_approx;
+	}
+	&:hover:after {
+		width: 100%;
+		left: 0;
+	}
+}
+.papilles--underline {
+	&:after {
+		background: none repeat scroll 0 0 transparent;
+		content: "";
+		display: block;
+		height: 2.5px;
+		left: 50%;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: width 0.6s ease 0s, left 0.6s ease 0s;
+		width: 0;
+	}
+	&:hover:after {
+		width: 100%;
+		left: 0;
+	}
+}
+.gout--underline {
+	&:after {
+		background: none repeat scroll 0 0 transparent;
+		content: "";
+		display: block;
+		height: 2.5px;
+		left: 50%;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: width 0.6s ease 0s, left 0.6s ease 0s;
+		width: 0;
+	}
+	&:hover:after {
+		width: 100%;
+		left: 0;
+	}
+}
+@media(max-width: 1100px) {
+	h3 {
+		font-size: 2rem;
+	}
+}
+@media(max-width: 500px) {
+	body {
+		margin: 0;
+	}
+	h3 {
+		font-size: 1.5rem !important;
+	}
+	footer {
+		font-size: 0.6em !important;
+		line-height: 1.5em !important;
+	}
+}
