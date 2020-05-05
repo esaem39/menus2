@@ -10,7 +10,7 @@ a {
   color: #FDCB46;
   text-decoration: none;
 }
-
+//degradé
 .icon {
   width: 3em;
   background: -webkit-gradient(linear, left top, right bottom, from(#e34040), to(#fad5a7));
@@ -18,7 +18,7 @@ a {
   -webkit-text-fill-color: transparent;
   font-size: 30px;
 }
-
+//grille et menus
 .grid {
   display: grid;
   grid-template-columns: 2fr 3fr 4fr 1fr 4fr 3fr 2fr;
@@ -95,7 +95,7 @@ a {
     color: #cc6410;
   }
 }
-
+//degradé note
 .icon:before {
   background: -webkit-linear-gradient(360deg, #e24a56, #eb944d);
   -webkit-background-clip: text;
@@ -148,8 +148,6 @@ a {
   box-shadow: 0px 0px 6px 6px #e7e2e2;
   text-align: center;
   grid-area: gout;
-
-  /*z-index: 2;*/
 
   p {
     font-size: 1.6rem;
@@ -414,8 +412,6 @@ footer {
     display: flex;
     max-height: 5%;
 
-    /*flex-flow: row nowrap;
-    justify-content: space-between;*/
     flex-direction: column;
     align-items: center;
     grid-area: footer;
