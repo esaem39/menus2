@@ -339,13 +339,13 @@ a {
 }
 
 footer {
-  flex-flow: row wrap !important;
+  flex-flow: row wrap;
   padding: 0.5rem 1rem 0.5rem 1rem;
   line-height: 0rem;
 
   a {
-    text-align: center !important;
-    margin: auto !important;
+    text-align: center;
+    margin: auto;
   }
 }
 
